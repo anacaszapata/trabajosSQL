@@ -60,3 +60,5 @@ ALTER TABLE tipo_vehiculo ADD FOREIGN KEY(marcas_id) REFERENCES marcas(id)
 ALTER TABLE vehiculos ADD FOREIGN KEY (tipo_vehiculo_id) REFERENCES tipo_vehiculo(id)
 
 ALTER TABLE vehiculos ADD FOREIGN KEY (tipo_vehiculo_marcas_id) REFERENCES tipo_vehiculo(marcas_id)
+
+SELECT vehiculos.modelo, vehiculo.placa, colores.color, marcas.marca, tipo_vehiculo.tipo_vehiculo FROM vehiculos INNER JOIN marcas INNER JOIN colores INNER JOIN tipo_vehiculo WHERE vehiculos.colores_id = colores.id AND vehiculos.tipo_vehiculo_id= tipo_vehiculo.id AND tipo_vehiculo.marcas_id =marcas.id
