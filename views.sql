@@ -207,5 +207,13 @@ END //
 
 CALL insertar_libro('Cien años de soledad', 'Gabriel García Márquez', 1);
 
+CREATE PROCEDURE eliminar_libro (
+    IN 1 INT
+)
+BEGIN
+    DELETE FROM libros WHERE id =1;
+END //
+
+
 
 
